@@ -8,11 +8,11 @@ redirect_from:
   - "tips/false-in-jsx.html"
 ---
 
-In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.
+React ഉപയോഗിച്ച് നിങ്ങൾക്ക് ആവശ്യമുള്ള സ്വഭാവത്തെ ഉൾക്കൊള്ളുന്ന വ്യത്യസ്ത കംമ്പോണന്റ് സൃഷ്ടിക്കാൻ കഴിയും. തുടർന്ന്, നിങ്ങളുടെ ആപ്ലിക്കേഷന്റെ state ആശ്രയിച്ച് അവയിൽ ചിലത് മാത്രമായി നിങ്ങൾക്ക് റെൻഡർ ചെയ്യാൻ കഴിയും.
 
-Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) or the [conditional operator](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) to create elements representing the current state, and let React update the UI to match them.
+ജാവാസ്ക്രിപ്റ്റിലെ കണ്ടിഷൻസ് പ്രവർത്തിക്കുന്ന അതേ രീതിയിൽ തന്നെയാണ് Reactലെ കണ്ടീഷണൽ റെൻഡറിങ്ങിന്റെയും പ്രവർത്തനം. നിലവിലെ state പ്രതിനിതീകരിക്കുന്ന ഘടകങ്ങൾ സൃഷ്ടിക്കാൻ [`if`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else) അല്ലെങ്കിൽ [കണ്ടിഷണൽ ഓപ്പറേറ്റർ](https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Conditional_Operator) പോലെയുള്ള ജാവാസ്ക്രിപ്റ്റ് ഓപ്പറേറ്റർസ്  ഉപയോഗിക്കുക, React  അവയിൽ പൊരുത്തപ്പെടുന്നവയെ UIയിൽ അപ്ഡേറ്റ് ചെയ്തോളും.
 
-Consider these two components:
+ഉദാഹരണത്തിനായി ഈ രണ്ട് components  പരിഗണിക്കുക:
 
 ```js
 function UserGreeting(props) {
@@ -24,7 +24,8 @@ function GuestGreeting(props) {
 }
 ```
 
-We'll create a `Greeting` component that displays either of these components depending on whether a user is logged in:
+
+ഒരു യൂസർ ലോഗിൻ ചെയ്തിട്ടുണ്ടോ എന്നതിനെ ആശ്രയിച്ച് ഈ രണ്ട് കംമ്പോണന്റ്കൾ പ്രദർശിപ്പിക്കുന്ന ഒരു `Greeting` കംമ്പോണന്റ് നമുക്ക് സൃഷ്ടിക്കാം:
 
 ```javascript{3-7,11,12}
 function Greeting(props) {
@@ -44,7 +45,7 @@ ReactDOM.render(
 
 [**Try it on CodePen**](https://codepen.io/gaearon/pen/ZpVxNq?editors=0011)
 
-This example renders a different greeting depending on the value of `isLoggedIn` prop.
+ഈ ഉദാഹരണത്തിൽ IsLoggedIn propന്റെ വാല്യൂ ആശ്രയിച്ച് വ്യത്യസ്തമായ ഗ്രീറ്റിംഗ് render ചെയ്യുന്നു.
 
 ### Element Variables {#element-variables}
 
